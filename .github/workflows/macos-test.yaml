@@ -30,5 +30,11 @@ jobs:
           ruby-version: ${{ matrix.ruby-version }}
       - name: Install dependencies
         run: bundle install
+      - run: bundle exec ruby ./test/plugin_helper/test_child_process.rb
+      - run: bundle exec ruby ./test/plugin_helper/test_child_process.rb
+      - run: bundle exec ruby ./test/plugin_helper/test_child_process.rb
+      - run: bundle exec ruby ./test/plugin_helper/test_child_process.rb
+      - run: bundle exec ruby ./test/plugin_helper/test_child_process.rb
+      - run: bundle exec ruby ./test/plugin_helper/test_child_process.rb
       - name: Run tests
         run: bundle exec rake test
