@@ -87,7 +87,7 @@ module Fluent
 
           sleep_with_watching_threads = ->(){
             if @instance.respond_to?(:_threads)
-              @instance._threads.each_value{|t| t.join(0) }
+              @instance._threads.values.each{|t| t.join(0) }
             end
             sleep 0.1
           }
